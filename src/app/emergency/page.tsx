@@ -31,7 +31,7 @@ const emergencyContacts = [
 ]
 
 const safetyTips = [
-  "Jika kamu dalam bahaya fisik langsung, hubungi 112 atau pergi ke lokasi teraman terdekat",
+  "Jika kamu dalam bahaya fisik langsung, hubungi SAPA 129 atau pergi ke lokasi teraman terdekat",
   "Percayai instingmu - jika ada yang terasa salah, segera cari bantuan",
   "Simpan nomor telepon penting di ponselmu atau tulis di tempat aman",
   "Miliki rencana keamanan - ketahui ke mana kamu bisa pergi dan siapa yang bisa dihubungi",
@@ -59,7 +59,7 @@ export default function EmergencyPage() {
             <h1 className="text-2xl font-bold text-red-800">Bantuan Darurat & Dukungan Krisis</h1>
           </div>
           <p className="text-red-700 text-lg">
-            Jika kamu dalam bahaya langsung, segera hubungi layanan darurat (112) atau pergi ke lokasi teraman terdekat.
+            Jika kamu dalam bahaya langsung, segera hubungi layanan darurat SAPA 129 atau pergi ke lokasi teraman terdekat.
           </p>
         </div>
 
