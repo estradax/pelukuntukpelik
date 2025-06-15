@@ -50,10 +50,6 @@ export default function ReportPage() {
               <Heart className="h-6 w-6 text-[#5BA4CF]" />
               <span className="font-semibold text-[#5BA4CF]">Peluk untuk Pelik</span>
             </Link>
-            <Button variant="ghost" onClick={handleSaveDraft} className="text-[#5BA4CF] hover:bg-[#D6ECFA]">
-              <Save className="h-4 w-4 mr-2" />
-              Simpan Draf
-            </Button>
           </div>
         </div>
       </header>
@@ -90,7 +86,6 @@ export default function ReportPage() {
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Laporanmu sepenuhnya anonim kecuali kamu memilih sebaliknya</li>
                     <li>• Semua informasi dienkripsi dan aman</li>
-                    <li>• Kamu bisa menyimpan progres dan kembali nanti</li>
                     <li>• Kamu bisa melewati pertanyaan yang membuatmu tidak nyaman</li>
                   </ul>
                 </div>
