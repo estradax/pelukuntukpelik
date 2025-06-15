@@ -48,14 +48,14 @@ const objectives = [
       "Meningkatkan kesadaran masyarakat tentang pencegahan kekerasan seksual terhadap anak dan cara mendukung korban dengan tepat.",
   },
   {
-    title: "Advokasi Hukum",
-    description:
-      "Menyediakan dukungan hukum dan advokasi untuk memastikan korban mendapatkan keadilan dan perlindungan yang layak.",
-  },
-  {
     title: "Dukungan Keluarga",
     description:
       "Memberikan dukungan dan edukasi kepada keluarga korban untuk menciptakan lingkungan yang mendukung proses pemulihan.",
+  },
+  {
+    title: "Memulihkan Keberfungsian Sosial Korban",
+    description:
+      "Membantu korban kekerasan seksual kembali percaya diri dan terhubung dengan lingkungan sosialnya.",
   },
 ]
 

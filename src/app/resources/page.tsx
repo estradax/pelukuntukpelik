@@ -7,102 +7,102 @@ import Link from "next/link"
 
 const resourceCategories = [
   {
-    title: "Understanding Trauma",
+    title: "Memahami Trauma",
     icon: Heart,
     color: "bg-[#D6ECFA]",
     articles: [
       {
-        title: "What is Trauma? A Guide for Young People",
-        description: "Understanding what trauma is and how it affects your mind and body",
-        readTime: "5 min read",
-        type: "Article",
+        title: "Apa itu Trauma? Panduan untuk Anak Muda",
+        description: "Memahami apa itu trauma dan bagaimana pengaruhnya terhadap pikiran dan tubuhmu",
+        readTime: "5 menit baca",
+        type: "Artikel",
       },
       {
-        title: "Healing is Possible: Your Journey Forward",
-        description: "Hope and encouragement for survivors on their path to recovery",
-        readTime: "7 min read",
-        type: "Article",
+        title: "Penyembuhan itu Mungkin: Perjalananmu ke Depan",
+        description: "Harapan dan dorongan untuk penyintas dalam perjalanan menuju pemulihan",
+        readTime: "7 menit baca",
+        type: "Artikel",
       },
       {
-        title: "Common Reactions to Trauma",
-        description: "Normal responses to traumatic experiences and when to seek help",
-        readTime: "6 min read",
-        type: "Article",
+        title: "Reaksi Umum terhadap Trauma",
+        description: "Respons normal terhadap pengalaman traumatis dan kapan harus mencari bantuan",
+        readTime: "6 menit baca",
+        type: "Artikel",
       },
     ],
   },
   {
-    title: "Self-Care & Coping",
+    title: "Perawatan Diri & Coping",
     icon: Shield,
     color: "bg-[#FFE6E6]",
     articles: [
       {
-        title: "Breathing Exercises for Anxiety",
-        description: "Simple techniques to help calm your mind and body",
-        readTime: "3 min read",
+        title: "Latihan Pernapasan untuk Kecemasan",
+        description: "Teknik sederhana untuk membantu menenangkan pikiran dan tubuhmu",
+        readTime: "3 menit baca",
         type: "Video",
       },
       {
-        title: "Creating a Safety Plan",
-        description: "Steps to help you feel safer and more in control",
-        readTime: "8 min read",
-        type: "Guide",
+        title: "Membuat Rencana Keamanan",
+        description: "Langkah-langkah untuk membantumu merasa lebih aman dan terkendali",
+        readTime: "8 menit baca",
+        type: "Panduan",
       },
       {
-        title: "Grounding Techniques",
-        description: "Ways to stay present when feeling overwhelmed",
-        readTime: "4 min read",
-        type: "Article",
+        title: "Teknik Grounding",
+        description: "Cara untuk tetap hadir saat merasa kewalahan",
+        readTime: "4 menit baca",
+        type: "Artikel",
       },
     ],
   },
   {
-    title: "Know Your Rights",
+    title: "Ketahui Hak-hakmu",
     icon: Scale,
     color: "bg-[#E7DFFF]",
     articles: [
       {
-        title: "Your Legal Rights as a Survivor",
-        description: "Understanding your rights and legal protections",
-        readTime: "10 min read",
-        type: "Guide",
+        title: "Hak Hukummu sebagai Penyintas",
+        description: "Memahami hak-hak dan perlindungan hukummu",
+        readTime: "10 menit baca",
+        type: "Panduan",
       },
       {
-        title: "Reporting Options Explained",
-        description: "Different ways to report abuse and what to expect",
-        readTime: "8 min read",
-        type: "Article",
+        title: "Opsi Pelaporan Dijelaskan",
+        description: "Berbagai cara melaporkan pelecehan dan apa yang bisa diharapkan",
+        readTime: "8 menit baca",
+        type: "Artikel",
       },
       {
-        title: "Working with Law Enforcement",
-        description: "What happens when you report to police",
-        readTime: "6 min read",
-        type: "Guide",
+        title: "Bekerja dengan Penegak Hukum",
+        description: "Apa yang terjadi ketika kamu melaporkan ke polisi",
+        readTime: "6 menit baca",
+        type: "Panduan",
       },
     ],
   },
   {
-    title: "Supporting Others",
+    title: "Mendukung Orang Lain",
     icon: Users,
     color: "bg-[#D6ECFA]",
     articles: [
       {
-        title: "How to Support a Friend Who's Been Hurt",
-        description: "Being there for someone who has experienced abuse",
-        readTime: "7 min read",
-        type: "Article",
+        title: "Cara Mendukung Teman yang Terluka",
+        description: "Hadir untuk seseorang yang mengalami pelecehan",
+        readTime: "7 menit baca",
+        type: "Artikel",
       },
       {
-        title: "For Parents: Supporting Your Child",
-        description: "How families can help in the healing process",
-        readTime: "12 min read",
-        type: "Guide",
+        title: "Untuk Orang Tua: Mendukung Anakmu",
+        description: "Bagaimana keluarga dapat membantu dalam proses penyembuhan",
+        readTime: "12 menit baca",
+        type: "Panduan",
       },
       {
-        title: "Creating Safe Spaces",
-        description: "Building environments where survivors feel supported",
-        readTime: "5 min read",
-        type: "Article",
+        title: "Menciptakan Ruang Aman",
+        description: "Membangun lingkungan di mana penyintas merasa didukung",
+        readTime: "5 menit baca",
+        type: "Artikel",
       },
     ],
   },
@@ -127,10 +127,10 @@ export default function ResourcesPage() {
           <div className="w-20 h-20 mx-auto mb-6 bg-[#D6ECFA] rounded-full flex items-center justify-center">
             <BookOpen className="h-10 w-10 text-[#5BA4CF]" />
           </div>
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Educational Resources</h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Sumber Daya Edukasi</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Knowledge is empowering. Explore articles, guides, and videos designed to help you understand trauma, know
-            your rights, and support your healing journey.
+            Pengetahuan adalah kekuatan. Jelajahi artikel, panduan, dan video yang dirancang untuk membantumu memahami
+            trauma, mengetahui hak-hakmu, dan mendukung perjalanan penyembuhanmu.
           </p>
         </div>
 
@@ -139,7 +139,7 @@ export default function ResourcesPage() {
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
             <Input
-              placeholder="Search for resources, topics, or questions..."
+              placeholder="Cari sumber daya, topik, atau pertanyaan..."
               className="pl-10 py-3 text-lg border-[#A3CFF2]/30 focus:border-[#5BA4CF]"
             />
           </div>
@@ -177,7 +177,7 @@ export default function ResourcesPage() {
                     <CardContent className="pt-0">
                       <p className="text-gray-600 text-sm mb-4 leading-relaxed">{article.description}</p>
                       <Button variant="ghost" className="text-[#5BA4CF] hover:bg-[#D6ECFA] p-0 h-auto">
-                        Read More →
+                        Baca Selengkapnya →
                       </Button>
                     </CardContent>
                   </Card>
@@ -189,7 +189,7 @@ export default function ResourcesPage() {
 
         {/* Featured Downloads */}
         <div className="mt-16">
-          <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Helpful Downloads</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Unduhan Bermanfaat</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="border-[#A3CFF2]/20">
               <CardContent className="p-6">
@@ -198,12 +198,12 @@ export default function ResourcesPage() {
                     <Download className="h-6 w-6 text-[#5BA4CF]" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-gray-800 mb-2">Safety Planning Worksheet</h3>
+                    <h3 className="font-semibold text-gray-800 mb-2">Lembar Kerja Perencanaan Keamanan</h3>
                     <p className="text-gray-600 text-sm mb-3">
-                      A step-by-step guide to creating your personal safety plan
+                      Panduan langkah demi langkah untuk membuat rencana keamanan personalmu
                     </p>
                     <Button size="sm" className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white">
-                      Download PDF
+                      Unduh PDF
                     </Button>
                   </div>
                 </div>
@@ -217,10 +217,12 @@ export default function ResourcesPage() {
                     <Heart className="h-6 w-6 text-[#5BA4CF]" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-gray-800 mb-2">Self-Care Checklist</h3>
-                    <p className="text-gray-600 text-sm mb-3">Daily and weekly activities to support your wellbeing</p>
+                    <h3 className="font-semibold text-gray-800 mb-2">Checklist Perawatan Diri</h3>
+                    <p className="text-gray-600 text-sm mb-3">
+                      Aktivitas harian dan mingguan untuk mendukung kesejahteraanmu
+                    </p>
                     <Button size="sm" className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white">
-                      Download PDF
+                      Unduh PDF
                     </Button>
                   </div>
                 </div>
@@ -232,15 +234,15 @@ export default function ResourcesPage() {
         {/* Support Message */}
         <Card className="mt-12 bg-[#D6ECFA]/30 border-[#A3CFF2]/20">
           <CardContent className="p-8 text-center">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Need More Support?</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Butuh Dukungan Lebih?</h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Learning about trauma and healing is an important step, but you don't have to navigate this journey alone.
-              Professional support is available whenever you're ready.
+              Belajar tentang trauma dan penyembuhan adalah langkah penting, tapi kamu tidak harus menavigasi perjalanan
+              ini sendirian. Dukungan profesional tersedia kapan pun kamu siap.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/counseling">
                 <Button className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white px-6 py-3 rounded-full">
-                  Talk to a Counselor
+                  Bicara dengan Konselor
                 </Button>
               </Link>
               <Link href="/report">
@@ -248,7 +250,7 @@ export default function ResourcesPage() {
                   variant="outline"
                   className="border-[#5BA4CF] text-[#5BA4CF] hover:bg-[#D6ECFA] px-6 py-3 rounded-full"
                 >
-                  Share Your Story
+                  Bagikan Ceritamu
                 </Button>
               </Link>
             </div>
@@ -259,11 +261,11 @@ export default function ResourcesPage() {
         <div className="mt-8 text-center">
           <div className="bg-[#FFE6E6] p-4 rounded-lg">
             <p className="text-gray-700 mb-2">
-              <strong>Remember:</strong> If you need immediate help, crisis support is available 24/7.
+              <strong>Ingat:</strong> Jika kamu butuh bantuan segera, dukungan krisis tersedia 24/7.
             </p>
             <Link href="/emergency">
               <Button variant="outline" className="border-red-300 text-red-600 hover:bg-red-50 rounded-full">
-                Get Emergency Help
+                Dapatkan Bantuan Darurat
               </Button>
             </Link>
           </div>
@@ -272,3 +274,4 @@ export default function ResourcesPage() {
     </div>
   )
 }
+

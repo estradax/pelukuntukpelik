@@ -16,19 +16,19 @@ export default function HomePage() {
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <Link href="/about" className="text-gray-700 hover:text-[#5BA4CF] transition-colors">
-                About Us
+                Tentang Kami
               </Link>
               <Link href="/counseling" className="text-gray-700 hover:text-[#5BA4CF] transition-colors">
-                Counseling
+                Konseling
               </Link>
               <Link href="/resources" className="text-gray-700 hover:text-[#5BA4CF] transition-colors">
-                Resources
+                Sumber Daya
               </Link>
               <Link
                 href="/emergency"
                 className="bg-[#FFE6E6] text-[#5BA4CF] px-4 py-2 rounded-full hover:bg-[#FFE6E6]/80 transition-colors"
               >
-                Emergency Help
+                Bantuan Darurat
               </Link>
             </div>
           </nav>
@@ -46,15 +46,15 @@ export default function HomePage() {
               A Safe Hug in a Difficult Time
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              You are not alone. We believe you. Your story matters. This is a safe space where you can speak freely and
-              find the support you deserve.
+              Kamu tidak sendirian. Kami percaya padamu. Ceritamu penting. Ini adalah ruang aman di mana kamu bisa
+              berbicara dengan bebas dan menemukan dukungan yang kamu butuhkan.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/report">
               <Button className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white px-8 py-4 text-lg rounded-full shadow-lg transition-all duration-300 hover:shadow-xl">
-                Start Telling Your Story
+                Mulai Ceritakan Kisahmu
               </Button>
             </Link>
             <Link href="/emergency">
@@ -62,7 +62,7 @@ export default function HomePage() {
                 variant="outline"
                 className="border-[#FFE6E6] text-[#5BA4CF] hover:bg-[#FFE6E6] px-8 py-4 text-lg rounded-full transition-all duration-300"
               >
-                Need Help Now
+                Butuh Bantuan Sekarang
               </Button>
             </Link>
           </div>
@@ -72,7 +72,7 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">How We Can Help You</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Bagaimana Kami Dapat Membantumu</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-[#A3CFF2]/20 hover:shadow-lg transition-shadow duration-300">
@@ -80,13 +80,13 @@ export default function HomePage() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-[#D6ECFA] rounded-full flex items-center justify-center">
                   <Shield className="h-8 w-8 text-[#5BA4CF]" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Anonymous Reporting</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Pelaporan Anonim</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Share your story safely and anonymously. You control what you share and when you share it.
+                  Bagikan ceritamu dengan aman dan anonim. Kamu yang mengontrol apa yang ingin dibagikan dan kapan.
                 </p>
                 <Link href="/report">
                   <Button variant="ghost" className="mt-4 text-[#5BA4CF] hover:bg-[#D6ECFA]">
-                    Learn More
+                    Pelajari Lebih Lanjut
                   </Button>
                 </Link>
               </CardContent>
@@ -97,13 +97,14 @@ export default function HomePage() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-[#D6ECFA] rounded-full flex items-center justify-center">
                   <MessageCircle className="h-8 w-8 text-[#5BA4CF]" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Professional Counseling</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Konseling Profesional</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Connect with trained counselors who understand trauma and can provide the support you need.
+                  Terhubung dengan konselor terlatih yang memahami trauma dan dapat memberikan dukungan yang kamu
+                  butuhkan.
                 </p>
                 <Link href="/counseling">
                   <Button variant="ghost" className="mt-4 text-[#5BA4CF] hover:bg-[#D6ECFA]">
-                    Find Support
+                    Cari Dukungan
                   </Button>
                 </Link>
               </CardContent>
@@ -114,13 +115,14 @@ export default function HomePage() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-[#D6ECFA] rounded-full flex items-center justify-center">
                   <BookOpen className="h-8 w-8 text-[#5BA4CF]" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Educational Resources</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Sumber Daya Edukasi</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Access helpful information about healing, your rights, and how to support yourself and others.
+                  Akses informasi bermanfaat tentang penyembuhan, hak-hakmu, dan cara mendukung diri sendiri dan orang
+                  lain.
                 </p>
                 <Link href="/resources">
                   <Button variant="ghost" className="mt-4 text-[#5BA4CF] hover:bg-[#D6ECFA]">
-                    Explore Resources
+                    Jelajahi Sumber Daya
                   </Button>
                 </Link>
               </CardContent>
@@ -132,10 +134,11 @@ export default function HomePage() {
       {/* Support Message */}
       <section className="py-16 px-4 bg-gradient-to-r from-[#D6ECFA] to-[#A3CFF2]/20">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">You Are Brave. You Are Strong.</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">Kamu Berani. Kamu Kuat.</h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Taking the first step to seek help takes incredible courage. We're here to walk alongside you on your
-            journey to healing. Every story shared helps create a safer world for all children.
+            Mengambil langkah pertama untuk mencari bantuan membutuhkan keberanian yang luar biasa. Kami di sini untuk
+            berjalan bersamamu dalam perjalanan menuju penyembuhan. Setiap cerita yang dibagikan membantu menciptakan
+            dunia yang lebih aman untuk semua anak.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/about">
@@ -143,7 +146,7 @@ export default function HomePage() {
                 variant="outline"
                 className="border-[#5BA4CF] text-[#5BA4CF] hover:bg-[#5BA4CF] hover:text-white px-6 py-3 rounded-full"
               >
-                Learn About Our Mission
+                Pelajari Misi Kami
               </Button>
             </Link>
           </div>
@@ -155,13 +158,13 @@ export default function HomePage() {
         <div className="container mx-auto max-w-4xl">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-4 md:mb-0">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Need Immediate Help?</h3>
-              <p className="text-gray-600">Crisis support is available 24/7. You don't have to face this alone.</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Butuh Bantuan Segera?</h3>
+              <p className="text-gray-600">Dukungan krisis tersedia 24/7. Kamu tidak harus menghadapi ini sendirian.</p>
             </div>
             <Link href="/emergency">
               <Button className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white px-6 py-3 rounded-full flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                Get Help Now
+                Dapatkan Bantuan Sekarang
               </Button>
             </Link>
           </div>
@@ -178,65 +181,66 @@ export default function HomePage() {
                 <span className="font-semibold text-[#5BA4CF]">Peluk untuk Pelik</span>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed">
-                A digital sanctuary providing safe, supportive space for young survivors of sexual violence.
+                Sebuah tempat perlindungan digital yang menyediakan ruang aman dan suportif untuk korban muda kekerasan
+                seksual.
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold text-gray-800 mb-3">Support</h4>
+              <h4 className="font-semibold text-gray-800 mb-3">Dukungan</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link href="/report" className="text-gray-600 hover:text-[#5BA4CF]">
-                    Anonymous Reporting
+                    Pelaporan Anonim
                   </Link>
                 </li>
                 <li>
                   <Link href="/counseling" className="text-gray-600 hover:text-[#5BA4CF]">
-                    Counseling Services
+                    Layanan Konseling
                   </Link>
                 </li>
                 <li>
                   <Link href="/emergency" className="text-gray-600 hover:text-[#5BA4CF]">
-                    Emergency Help
+                    Bantuan Darurat
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-gray-800 mb-3">Resources</h4>
+              <h4 className="font-semibold text-gray-800 mb-3">Sumber Daya</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link href="/resources" className="text-gray-600 hover:text-[#5BA4CF]">
-                    Educational Content
+                    Konten Edukasi
                   </Link>
                 </li>
                 <li>
                   <Link href="/about" className="text-gray-600 hover:text-[#5BA4CF]">
-                    About Us
+                    Tentang Kami
                   </Link>
                 </li>
                 <li>
                   <Link href="/privacy" className="text-gray-600 hover:text-[#5BA4CF]">
-                    Privacy Policy
+                    Kebijakan Privasi
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-gray-800 mb-3">Crisis Hotlines</h4>
+              <h4 className="font-semibold text-gray-800 mb-3">Hotline Krisis</h4>
               <ul className="space-y-2 text-sm">
-                <li className="text-gray-600">National: 119</li>
-                <li className="text-gray-600">Child Protection: 129</li>
-                <li className="text-gray-600">Women's Crisis: 021-7270005</li>
+                <li className="text-gray-600">Nasional: 119</li>
+                <li className="text-gray-600">Perlindungan Anak: 129</li>
+                <li className="text-gray-600">Krisis Perempuan: 021-7270005</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-[#A3CFF2]/20 mt-8 pt-8 text-center">
             <p className="text-gray-600 text-sm">
-              © 2024 Peluk untuk Pelik. All rights reserved. Your privacy and safety are our priority.
+              © 2024 Peluk untuk Pelik. Semua hak dilindungi. Privasi dan keamananmu adalah prioritas kami.
             </p>
           </div>
         </div>

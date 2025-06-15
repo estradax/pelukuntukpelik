@@ -9,34 +9,34 @@ const counselors = [
   {
     id: 1,
     name: "Dr. Sarah Chen",
-    specialization: "Child Trauma & PTSD",
-    experience: "8 years",
-    languages: ["English", "Indonesian"],
+    specialization: "Trauma Anak & PTSD",
+    experience: "8 tahun",
+    languages: ["Bahasa Indonesia", "English"],
     rating: 4.9,
-    availability: "Available Today",
-    bio: "Dr. Chen specializes in trauma-informed therapy for children and adolescents. She creates a safe, non-judgmental space for healing.",
+    availability: "Tersedia Hari Ini",
+    bio: "Dr. Chen mengkhususkan diri dalam terapi trauma-informed untuk anak dan remaja. Beliau menciptakan ruang yang aman dan tanpa penghakiman untuk penyembuhan.",
     image: "/placeholder.svg?height=120&width=120",
   },
   {
     id: 2,
     name: "Dr. Ahmad Rahman",
-    specialization: "Family Therapy & Support",
-    experience: "12 years",
-    languages: ["Indonesian", "English", "Arabic"],
+    specialization: "Terapi Keluarga & Dukungan",
+    experience: "12 tahun",
+    languages: ["Bahasa Indonesia", "English", "Arabic"],
     rating: 4.8,
-    availability: "Available Tomorrow",
-    bio: "Dr. Rahman works with survivors and their families, helping rebuild trust and communication in a supportive environment.",
+    availability: "Tersedia Besok",
+    bio: "Dr. Rahman bekerja dengan penyintas dan keluarga mereka, membantu membangun kembali kepercayaan dan komunikasi dalam lingkungan yang mendukung.",
     image: "/placeholder.svg?height=120&width=120",
   },
   {
     id: 3,
     name: "Dr. Maya Sari",
-    specialization: "Adolescent Psychology",
-    experience: "6 years",
-    languages: ["Indonesian", "English"],
+    specialization: "Psikologi Remaja",
+    experience: "6 tahun",
+    languages: ["Bahasa Indonesia", "English"],
     rating: 4.9,
-    availability: "Available Today",
-    bio: "Dr. Sari focuses on helping teenagers process trauma and develop healthy coping strategies for their journey to recovery.",
+    availability: "Tersedia Hari Ini",
+    bio: "Dr. Sari fokus membantu remaja memproses trauma dan mengembangkan strategi koping yang sehat untuk perjalanan pemulihan mereka.",
     image: "/placeholder.svg?height=120&width=120",
   },
 ]
@@ -60,25 +60,25 @@ export default function CounselingPage() {
           <div className="w-20 h-20 mx-auto mb-6 bg-[#D6ECFA] rounded-full flex items-center justify-center">
             <MessageCircle className="h-10 w-10 text-[#5BA4CF]" />
           </div>
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Professional Counseling Support</h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Dukungan Konseling Profesional</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Connect with trained mental health professionals who understand trauma and are here to support your healing
-            journey. All sessions are confidential and trauma-informed.
+            Terhubung dengan profesional kesehatan mental terlatih yang memahami trauma dan siap mendukung perjalanan
+            penyembuhanmu. Semua sesi bersifat rahasia dan trauma-informed.
           </p>
         </div>
 
         {/* How It Works */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">How Our Counseling Works</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Cara Kerja Konseling Kami</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="border-[#A3CFF2]/20 text-center">
               <CardContent className="p-6">
                 <div className="w-12 h-12 mx-auto mb-4 bg-[#D6ECFA] rounded-full flex items-center justify-center">
                   <Calendar className="h-6 w-6 text-[#5BA4CF]" />
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-2">1. Choose Your Counselor</h3>
+                <h3 className="font-semibold text-gray-800 mb-2">1. Pilih Konselormu</h3>
                 <p className="text-gray-600 text-sm">
-                  Browse our qualified counselors and select someone you feel comfortable with.
+                  Jelajahi konselor berkualitas kami dan pilih seseorang yang membuatmu merasa nyaman.
                 </p>
               </CardContent>
             </Card>
@@ -88,9 +88,9 @@ export default function CounselingPage() {
                 <div className="w-12 h-12 mx-auto mb-4 bg-[#D6ECFA] rounded-full flex items-center justify-center">
                   <MessageCircle className="h-6 w-6 text-[#5BA4CF]" />
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-2">2. Book Your Session</h3>
+                <h3 className="font-semibold text-gray-800 mb-2">2. Jadwalkan Sesimu</h3>
                 <p className="text-gray-600 text-sm">
-                  Schedule a session that works for you - chat, video call, or phone.
+                  Jadwalkan sesi yang cocok untukmu - chat, video call, atau telepon.
                 </p>
               </CardContent>
             </Card>
@@ -100,9 +100,9 @@ export default function CounselingPage() {
                 <div className="w-12 h-12 mx-auto mb-4 bg-[#D6ECFA] rounded-full flex items-center justify-center">
                   <Heart className="h-6 w-6 text-[#5BA4CF]" />
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-2">3. Start Healing</h3>
+                <h3 className="font-semibold text-gray-800 mb-2">3. Mulai Penyembuhan</h3>
                 <p className="text-gray-600 text-sm">
-                  Begin your journey in a safe, supportive, and confidential environment.
+                  Mulai perjalananmu dalam lingkungan yang aman, mendukung, dan rahasia.
                 </p>
               </CardContent>
             </Card>
@@ -111,7 +111,7 @@ export default function CounselingPage() {
 
         {/* Counselors */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Meet Our Counselors</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Kenali Konselor Kami</h2>
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {counselors.map((counselor) => (
               <Card key={counselor.id} className="border-[#A3CFF2]/20 hover:shadow-lg transition-shadow duration-300">
@@ -131,7 +131,7 @@ export default function CounselingPage() {
 
                 <CardContent className="space-y-4">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">Experience:</span>
+                    <span className="text-gray-600">Pengalaman:</span>
                     <span className="font-medium">{counselor.experience}</span>
                   </div>
 
@@ -144,8 +144,8 @@ export default function CounselingPage() {
                   </div>
 
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">Languages:</span>
-                    <div className="flex gap-1">
+                    <span className="text-gray-600">Bahasa:</span>
+                    <div className="flex gap-1 flex-wrap">
                       {counselor.languages.map((lang) => (
                         <Badge key={lang} variant="secondary" className="text-xs bg-[#D6ECFA] text-[#5BA4CF]">
                           {lang}
@@ -164,7 +164,7 @@ export default function CounselingPage() {
                   <div className="flex gap-2 pt-2">
                     <Button className="flex-1 bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white text-sm">
                       <MessageCircle className="h-4 w-4 mr-2" />
-                      Chat Session
+                      Sesi Chat
                     </Button>
                     <Button
                       variant="outline"
@@ -183,22 +183,22 @@ export default function CounselingPage() {
         {/* Privacy & Safety */}
         <Card className="border-[#A3CFF2]/20 bg-[#D6ECFA]/20">
           <CardContent className="p-8">
-            <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Your Privacy & Safety</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Privasi & Keamananmu</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-semibold text-gray-800 mb-2">Confidentiality</h4>
+                <h4 className="font-semibold text-gray-800 mb-2">Kerahasiaan</h4>
                 <ul className="text-gray-600 text-sm space-y-1">
-                  <li>• All sessions are completely confidential</li>
-                  <li>• Your information is encrypted and secure</li>
-                  <li>• No session recordings without your consent</li>
+                  <li>• Semua sesi sepenuhnya rahasia</li>
+                  <li>• Informasimu dienkripsi dan aman</li>
+                  <li>• Tidak ada rekaman sesi tanpa persetujuanmu</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-800 mb-2">Professional Standards</h4>
+                <h4 className="font-semibold text-gray-800 mb-2">Standar Profesional</h4>
                 <ul className="text-gray-600 text-sm space-y-1">
-                  <li>• All counselors are licensed professionals</li>
-                  <li>• Specialized training in trauma therapy</li>
-                  <li>• Regular supervision and continuing education</li>
+                  <li>• Semua konselor adalah profesional berlisensi</li>
+                  <li>• Pelatihan khusus dalam terapi trauma</li>
+                  <li>• Supervisi rutin dan pendidikan berkelanjutan</li>
                 </ul>
               </div>
             </div>
@@ -208,13 +208,13 @@ export default function CounselingPage() {
         {/* Emergency Support */}
         <div className="mt-8 text-center">
           <div className="bg-[#FFE6E6] p-6 rounded-lg">
-            <h3 className="font-semibold text-gray-800 mb-2">Need Immediate Support?</h3>
+            <h3 className="font-semibold text-gray-800 mb-2">Butuh Dukungan Segera?</h3>
             <p className="text-gray-600 mb-4">
-              If you're in crisis or need immediate help, don't wait for a scheduled session.
+              Jika kamu dalam krisis atau butuh bantuan segera, jangan tunggu sesi terjadwal.
             </p>
             <Link href="/emergency">
               <Button className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white px-6 py-3 rounded-full">
-                Get Emergency Help Now
+                Dapatkan Bantuan Darurat Sekarang
               </Button>
             </Link>
           </div>

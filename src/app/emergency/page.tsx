@@ -5,37 +5,37 @@ import Link from "next/link"
 
 const emergencyContacts = [
   {
-    name: "National Child Protection Hotline",
+    name: "Hotline Perlindungan Anak Nasional",
     number: "119",
-    description: "24/7 crisis support for children and families",
+    description: "Dukungan krisis 24/7 untuk anak dan keluarga",
     type: "call",
   },
   {
-    name: "Women & Children Crisis Center",
+    name: "Pusat Krisis Perempuan & Anak",
     number: "021-7270005",
-    description: "Specialized support for sexual violence survivors",
+    description: "Dukungan khusus untuk penyintas kekerasan seksual",
     type: "call",
   },
   {
     name: "Crisis Text Line",
-    number: "Text HELP to 741741",
-    description: "Free, confidential crisis support via text",
+    number: "Kirim BANTUAN ke 741741",
+    description: "Dukungan krisis gratis dan rahasia via SMS",
     type: "text",
   },
   {
-    name: "Emergency Services",
+    name: "Layanan Darurat",
     number: "112",
-    description: "For immediate physical danger or medical emergency",
+    description: "Untuk bahaya fisik langsung atau darurat medis",
     type: "emergency",
   },
 ]
 
 const safetyTips = [
-  "If you're in immediate physical danger, call 112 or go to the nearest safe location",
-  "Trust your instincts - if something feels wrong, seek help immediately",
-  "Keep important phone numbers saved in your phone or written down",
-  "Have a safety plan - know where you can go and who you can call",
-  "Remember: it's never your fault, and help is always available",
+  "Jika kamu dalam bahaya fisik langsung, hubungi 112 atau pergi ke lokasi teraman terdekat",
+  "Percayai instingmu - jika ada yang terasa salah, segera cari bantuan",
+  "Simpan nomor telepon penting di ponselmu atau tulis di tempat aman",
+  "Miliki rencana keamanan - ketahui ke mana kamu bisa pergi dan siapa yang bisa dihubungi",
+  "Ingat: ini bukan salahmu, dan bantuan selalu tersedia",
 ]
 
 export default function EmergencyPage() {
@@ -56,11 +56,10 @@ export default function EmergencyPage() {
         <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-8">
           <div className="flex items-center gap-3 mb-4">
             <AlertTriangle className="h-8 w-8 text-red-500" />
-            <h1 className="text-2xl font-bold text-red-800">Emergency Help & Crisis Support</h1>
+            <h1 className="text-2xl font-bold text-red-800">Bantuan Darurat & Dukungan Krisis</h1>
           </div>
           <p className="text-red-700 text-lg">
-            If you are in immediate danger, please call emergency services (112) or go to the nearest safe location
-            right away.
+            Jika kamu dalam bahaya langsung, segera hubungi layanan darurat (112) atau pergi ke lokasi teraman terdekat.
           </p>
         </div>
 
@@ -69,11 +68,11 @@ export default function EmergencyPage() {
           <Card className="border-red-200 bg-red-50">
             <CardContent className="p-6 text-center">
               <Phone className="h-12 w-12 mx-auto mb-4 text-red-500" />
-              <h3 className="text-xl font-bold text-red-800 mb-2">Call for Help Now</h3>
-              <p className="text-red-700 mb-4">Speak directly with a crisis counselor</p>
+              <h3 className="text-xl font-bold text-red-800 mb-2">Hubungi Bantuan Sekarang</h3>
+              <p className="text-red-700 mb-4">Bicara langsung dengan konselor krisis</p>
               <a href="tel:119">
                 <Button className="bg-red-500 hover:bg-red-600 text-white w-full text-lg py-3">
-                  Call 119 - Child Protection
+                  Hubungi 119 - Perlindungan Anak
                 </Button>
               </a>
             </CardContent>
@@ -82,11 +81,11 @@ export default function EmergencyPage() {
           <Card className="border-[#5BA4CF]/20 bg-[#D6ECFA]/30">
             <CardContent className="p-6 text-center">
               <MessageCircle className="h-12 w-12 mx-auto mb-4 text-[#5BA4CF]" />
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Text for Support</h3>
-              <p className="text-gray-600 mb-4">Get help through confidential messaging</p>
-              <a href="sms:741741?body=HELP">
+              <h3 className="text-xl font-bold text-gray-800 mb-2">SMS untuk Dukungan</h3>
+              <p className="text-gray-600 mb-4">Dapatkan bantuan melalui pesan rahasia</p>
+              <a href="sms:741741?body=BANTUAN">
                 <Button className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white w-full text-lg py-3">
-                  Text HELP to 741741
+                  SMS BANTUAN ke 741741
                 </Button>
               </a>
             </CardContent>
@@ -98,7 +97,7 @@ export default function EmergencyPage() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl">
               <Phone className="h-6 w-6 text-[#5BA4CF]" />
-              Crisis Hotlines & Support
+              Hotline Krisis & Dukungan
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -115,15 +114,15 @@ export default function EmergencyPage() {
                       <a href={`tel:${contact.number.replace(/\D/g, "")}`}>
                         <Button size="sm" className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white">
                           <Phone className="h-4 w-4 mr-1" />
-                          Call Now
+                          Hubungi Sekarang
                         </Button>
                       </a>
                     )}
                     {contact.type === "text" && (
-                      <a href="sms:741741?body=HELP">
+                      <a href="sms:741741?body=BANTUAN">
                         <Button size="sm" className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white">
                           <MessageCircle className="h-4 w-4 mr-1" />
-                          Text Now
+                          SMS Sekarang
                         </Button>
                       </a>
                     )}
@@ -131,7 +130,7 @@ export default function EmergencyPage() {
                       <a href="tel:112">
                         <Button size="sm" className="bg-red-500 hover:bg-red-600 text-white">
                           <Phone className="h-4 w-4 mr-1" />
-                          Emergency
+                          Darurat
                         </Button>
                       </a>
                     )}
@@ -147,7 +146,7 @@ export default function EmergencyPage() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl">
               <Shield className="h-6 w-6 text-[#5BA4CF]" />
-              Safety Tips & Planning
+              Tips Keamanan & Perencanaan
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -166,15 +165,15 @@ export default function EmergencyPage() {
         <Card className="bg-[#D6ECFA]/30 border-[#A3CFF2]/20">
           <CardContent className="p-8 text-center">
             <Clock className="h-12 w-12 mx-auto mb-4 text-[#5BA4CF]" />
-            <h3 className="text-xl font-bold text-gray-800 mb-4">24/7 Support Available</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Dukungan 24/7 Tersedia</h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              You don't have to face this alone. Crisis support is available around the clock, every day of the year.
-              Trained counselors are ready to listen, believe you, and help you stay safe.
+              Kamu tidak harus menghadapi ini sendirian. Dukungan krisis tersedia sepanjang waktu, setiap hari dalam
+              setahun. Konselor terlatih siap mendengarkan, mempercayaimu, dan membantumu tetap aman.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/counseling">
                 <Button className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white px-6 py-3 rounded-full">
-                  Schedule Counseling
+                  Jadwalkan Konseling
                 </Button>
               </Link>
               <Link href="/report">
@@ -182,7 +181,7 @@ export default function EmergencyPage() {
                   variant="outline"
                   className="border-[#5BA4CF] text-[#5BA4CF] hover:bg-[#D6ECFA] px-6 py-3 rounded-full"
                 >
-                  Make a Report
+                  Buat Laporan
                 </Button>
               </Link>
             </div>
@@ -193,10 +192,10 @@ export default function EmergencyPage() {
         <div className="mt-8 text-center">
           <div className="bg-[#FFE6E6] p-6 rounded-lg">
             <Heart className="h-8 w-8 mx-auto mb-3 text-[#5BA4CF]" />
-            <h3 className="font-bold text-gray-800 mb-2">Remember: You Are Not Alone</h3>
+            <h3 className="font-bold text-gray-800 mb-2">Ingat: Kamu Tidak Sendirian</h3>
             <p className="text-gray-700">
-              What happened to you is not your fault. You are brave for seeking help. There are people who care about
-              you and want to support your healing journey.
+              Apa yang terjadi padamu bukan salahmu. Kamu berani karena mencari bantuan. Ada orang yang peduli padamu
+              dan ingin mendukung perjalanan penyembuhanmu.
             </p>
           </div>
         </div>
