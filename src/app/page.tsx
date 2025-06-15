@@ -18,9 +18,6 @@ export default function HomePage() {
               <Link href="/about" className="text-gray-700 hover:text-[#5BA4CF] transition-colors">
                 Tentang Kami
               </Link>
-              <Link href="/counseling" className="text-gray-700 hover:text-[#5BA4CF] transition-colors">
-                Konseling
-              </Link>
               <Link href="/resources" className="text-gray-700 hover:text-[#5BA4CF] transition-colors">
                 Sumber Daya
               </Link>
@@ -74,7 +71,7 @@ export default function HomePage() {
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Bagaimana Kami Dapat Membantumu</h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <Card className="border-[#A3CFF2]/20 hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-[#D6ECFA] rounded-full flex items-center justify-center">
@@ -87,24 +84,6 @@ export default function HomePage() {
                 <Link href="/report">
                   <Button variant="ghost" className="mt-4 text-[#5BA4CF] hover:bg-[#D6ECFA]">
                     Pelajari Lebih Lanjut
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="border-[#A3CFF2]/20 hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-[#D6ECFA] rounded-full flex items-center justify-center">
-                  <MessageCircle className="h-8 w-8 text-[#5BA4CF]" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Konseling Profesional</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Terhubung dengan konselor terlatih yang memahami trauma dan dapat memberikan dukungan yang kamu
-                  butuhkan.
-                </p>
-                <Link href="/counseling">
-                  <Button variant="ghost" className="mt-4 text-[#5BA4CF] hover:bg-[#D6ECFA]">
-                    Cari Dukungan
                   </Button>
                 </Link>
               </CardContent>
@@ -192,11 +171,6 @@ export default function HomePage() {
                 <li>
                   <Link href="/report" className="text-gray-600 hover:text-[#5BA4CF]">
                     Pelaporan Anonim
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/counseling" className="text-gray-600 hover:text-[#5BA4CF]">
-                    Layanan Konseling
                   </Link>
                 </li>
                 <li>

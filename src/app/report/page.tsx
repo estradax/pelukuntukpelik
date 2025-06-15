@@ -1,44 +1,56 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Textarea } from "@/components/ui/textarea"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Progress } from "@/components/ui/progress"
-import { Heart, Shield, ArrowLeft, ArrowRight, Save } from "lucide-react"
-import Link from "next/link"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Progress } from "@/components/ui/progress";
+import { Heart, Shield, ArrowLeft, ArrowRight, Loader2 } from "lucide-react";
+import Link from "next/link";
 
 export default function ReportPage() {
-  const [currentStep, setCurrentStep] = useState(1)
+  const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     story: "",
     location: "",
     timeframe: "",
     contactConsent: false,
     supportNeeded: false,
-  })
+  });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const totalSteps = 4
-  const progress = (currentStep / totalSteps) * 100
+  const totalSteps = 4;
+  const progress = (currentStep / totalSteps) * 100;
 
-  const handleNext = () => {
-    if (currentStep < totalSteps) {
-      setCurrentStep(currentStep + 1)
+  const handleNext = async () => {
+    if (currentStep === 3) {
+      setIsLoading(true);
+      await fetch("/api/send", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+      setIsLoading(false);
     }
-  }
+
+    if (currentStep < totalSteps) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
 
   const handlePrevious = () => {
     if (currentStep > 1) {
-      setCurrentStep(currentStep - 1)
+      setCurrentStep(currentStep - 1);
     }
-  }
+  };
 
   const handleSaveDraft = () => {
-    alert("Draf kamu telah disimpan dengan aman. Kamu bisa kembali kapan saja untuk melanjutkan.")
-  }
+    alert(
+      "Draf kamu telah disimpan dengan aman. Kamu bisa kembali kapan saja untuk melanjutkan."
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#D6ECFA] to-white">
@@ -48,7 +60,9 @@ export default function ReportPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
               <Heart className="h-6 w-6 text-[#5BA4CF]" />
-              <span className="font-semibold text-[#5BA4CF]">Peluk untuk Pelik</span>
+              <span className="font-semibold text-[#5BA4CF]">
+                Peluk untuk Pelik
+              </span>
             </Link>
           </div>
         </div>
@@ -61,7 +75,9 @@ export default function ReportPage() {
             <span className="text-sm text-gray-600">
               Langkah {currentStep} dari {totalSteps}
             </span>
-            <span className="text-sm text-gray-600">{Math.round(progress)}% Selesai</span>
+            <span className="text-sm text-gray-600">
+              {Math.round(progress)}% Selesai
+            </span>
           </div>
           <Progress value={progress} className="h-2" />
         </div>
@@ -71,10 +87,12 @@ export default function ReportPage() {
             <div className="w-16 h-16 mx-auto mb-4 bg-[#D6ECFA] rounded-full flex items-center justify-center">
               <Shield className="h-8 w-8 text-[#5BA4CF]" />
             </div>
-            <CardTitle className="text-2xl text-gray-800">Bagikan Ceritamu dengan Aman</CardTitle>
+            <CardTitle className="text-2xl text-gray-800">
+              Bagikan Ceritamu dengan Aman
+            </CardTitle>
             <p className="text-gray-600 mt-2">
-              Kamu yang mengontrol. Bagikan hanya yang membuatmu nyaman. Kamu bisa melewati pertanyaan apa pun atau
-              berhenti kapan saja.
+              Kamu yang mengontrol. Bagikan hanya yang membuatmu nyaman. Kamu
+              bisa melewati pertanyaan apa pun atau berhenti kapan saja.
             </p>
           </CardHeader>
 
@@ -82,11 +100,19 @@ export default function ReportPage() {
             {currentStep === 1 && (
               <div className="space-y-6">
                 <div className="bg-[#D6ECFA]/30 p-4 rounded-lg">
-                  <h3 className="font-semibold text-gray-800 mb-2">Sebelum Kita Mulai</h3>
+                  <h3 className="font-semibold text-gray-800 mb-2">
+                    Sebelum Kita Mulai
+                  </h3>
                   <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Laporanmu sepenuhnya anonim kecuali kamu memilih sebaliknya</li>
+                    <li>
+                      • Laporanmu sepenuhnya anonim kecuali kamu memilih
+                      sebaliknya
+                    </li>
                     <li>• Semua informasi dienkripsi dan aman</li>
-                    <li>• Kamu bisa melewati pertanyaan yang membuatmu tidak nyaman</li>
+                    <li>
+                      • Kamu bisa melewati pertanyaan yang membuatmu tidak
+                      nyaman
+                    </li>
                   </ul>
                 </div>
 
@@ -98,9 +124,13 @@ export default function ReportPage() {
                     placeholder="Bagikan sebanyak atau sesedikit yang membuatmu nyaman. Tidak ada tekanan untuk menyertakan detail spesifik."
                     className="min-h-32 border-[#A3CFF2]/30 focus:border-[#5BA4CF]"
                     value={formData.story}
-                    onChange={(e) => setFormData({ ...formData, story: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, story: e.target.value })
+                    }
                   />
-                  <p className="text-xs text-gray-500 mt-2">Ingat: Kamu berani karena berbagi. Setiap kata penting.</p>
+                  <p className="text-xs text-gray-500 mt-2">
+                    Ingat: Kamu berani karena berbagi. Setiap kata penting.
+                  </p>
                 </div>
               </div>
             )}
@@ -115,7 +145,9 @@ export default function ReportPage() {
                     placeholder="Lokasi umum (mis. sekolah, rumah, pusat komunitas) - tidak perlu alamat spesifik"
                     className="border-[#A3CFF2]/30 focus:border-[#5BA4CF]"
                     value={formData.location}
-                    onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, location: e.target.value })
+                    }
                   />
                 </div>
 
@@ -127,14 +159,18 @@ export default function ReportPage() {
                     placeholder="Perkiraan waktu (mis. bulan lalu, tahun ini, beberapa tahun lalu)"
                     className="border-[#A3CFF2]/30 focus:border-[#5BA4CF]"
                     value={formData.timeframe}
-                    onChange={(e) => setFormData({ ...formData, timeframe: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, timeframe: e.target.value })
+                    }
                   />
                 </div>
 
                 <div className="bg-[#FFE6E6]/50 p-4 rounded-lg">
                   <p className="text-sm text-gray-700">
-                    <strong>Ingat:</strong> Kamu tidak perlu memberikan detail yang tepat. Informasi umum membantu kami
-                    memahami cara memberikan dukungan yang lebih baik untuk penyintas sepertimu.
+                    <strong>Ingat:</strong> Kamu tidak perlu memberikan detail
+                    yang tepat. Informasi umum membantu kami memahami cara
+                    memberikan dukungan yang lebih baik untuk penyintas
+                    sepertimu.
                   </p>
                 </div>
               </div>
@@ -142,21 +178,32 @@ export default function ReportPage() {
 
             {currentStep === 3 && (
               <div className="space-y-6">
-                <h3 className="text-lg font-semibold text-gray-800">Bagaimana Kami Bisa Mendukungmu?</h3>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Bagaimana Kami Bisa Mendukungmu?
+                </h3>
 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <Checkbox
                       id="support"
                       checked={formData.supportNeeded}
-                      onCheckedChange={(checked) => setFormData({ ...formData, supportNeeded: checked as boolean })}
+                      onCheckedChange={(checked) =>
+                        setFormData({
+                          ...formData,
+                          supportNeeded: checked as boolean,
+                        })
+                      }
                     />
                     <div>
-                      <Label htmlFor="support" className="text-base font-medium text-gray-800">
+                      <Label
+                        htmlFor="support"
+                        className="text-base font-medium text-gray-800"
+                      >
                         Saya ingin terhubung dengan konselor
                       </Label>
                       <p className="text-sm text-gray-600 mt-1">
-                        Kami bisa menghubungkanmu dengan profesional terlatih yang khusus mendukung penyintas.
+                        Kami bisa menghubungkanmu dengan profesional terlatih
+                        yang khusus mendukung penyintas.
                       </p>
                     </div>
                   </div>
@@ -165,15 +212,24 @@ export default function ReportPage() {
                     <Checkbox
                       id="contact"
                       checked={formData.contactConsent}
-                      onCheckedChange={(checked) => setFormData({ ...formData, contactConsent: checked as boolean })}
+                      onCheckedChange={(checked) =>
+                        setFormData({
+                          ...formData,
+                          contactConsent: checked as boolean,
+                        })
+                      }
                     />
                     <div>
-                      <Label htmlFor="contact" className="text-base font-medium text-gray-800">
+                      <Label
+                        htmlFor="contact"
+                        className="text-base font-medium text-gray-800"
+                      >
                         Boleh menghubungi saya tentang laporan ini
                       </Label>
                       <p className="text-sm text-gray-600 mt-1">
-                        Centang ini hanya jika kamu ingin kami bisa menindaklanjuti. Laporanmu tetap akan diproses
-                        meskipun kamu tidak mencentang ini.
+                        Centang ini hanya jika kamu ingin kami bisa
+                        menindaklanjuti. Laporanmu tetap akan diproses meskipun
+                        kamu tidak mencentang ini.
                       </p>
                     </div>
                   </div>
@@ -181,8 +237,9 @@ export default function ReportPage() {
 
                 <div className="bg-[#D6ECFA]/30 p-4 rounded-lg">
                   <p className="text-sm text-gray-700">
-                    <strong>Pilihanmu:</strong> Opsi ini sepenuhnya terserah kamu. Laporanmu berharga terlepas dari apa
-                    yang kamu pilih di sini.
+                    <strong>Pilihanmu:</strong> Opsi ini sepenuhnya terserah
+                    kamu. Laporanmu berharga terlepas dari apa yang kamu pilih
+                    di sini.
                   </p>
                 </div>
               </div>
@@ -194,29 +251,39 @@ export default function ReportPage() {
                   <Heart className="h-10 w-10 text-[#5BA4CF]" />
                 </div>
 
-                <h3 className="text-xl font-semibold text-gray-800">Terima Kasih atas Keberanianmu</h3>
+                <h3 className="text-xl font-semibold text-gray-800">
+                  Terima Kasih atas Keberanianmu
+                </h3>
 
                 <div className="bg-[#D6ECFA]/30 p-6 rounded-lg text-left">
-                  <h4 className="font-semibold text-gray-800 mb-3">Apa yang Terjadi Selanjutnya:</h4>
+                  <h4 className="font-semibold text-gray-800 mb-3">
+                    Apa yang Terjadi Selanjutnya:
+                  </h4>
                   <ul className="space-y-2 text-sm text-gray-600">
-                    <li>• Laporanmu telah dikirim dengan aman dan dienkripsi</li>
-                    <li>• Tim kami akan meninjau laporanmu dengan hati-hati dan hormat</li>
-                    <li>• Jika kamu meminta dukungan, konselor akan menghubungi dalam 24 jam</li>
-                    <li>• Kamu selalu bisa kembali untuk mengakses lebih banyak sumber daya atau dukungan</li>
+                    <li>
+                      • Laporanmu telah dikirim dengan aman dan dienkripsi
+                    </li>
+                    <li>
+                      • Tim kami akan meninjau laporanmu dengan hati-hati dan
+                      hormat
+                    </li>
+                    <li>
+                      • Jika kamu meminta dukungan, konselor akan menghubungi
+                      dalam 24 jam
+                    </li>
+                    <li>
+                      • Kamu selalu bisa kembali untuk mengakses lebih banyak
+                      sumber daya atau dukungan
+                    </li>
                   </ul>
                 </div>
 
                 <p className="text-gray-600">
-                  Kamu telah mengambil langkah berani hari ini. Ingat: kamu tidak sendirian, kami percaya padamu, dan
-                  ceritamu penting.
+                  Kamu telah mengambil langkah berani hari ini. Ingat: kamu
+                  tidak sendirian, kami percaya padamu, dan ceritamu penting.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/counseling">
-                    <Button className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white px-6 py-3 rounded-full">
-                      Terhubung dengan Konselor
-                    </Button>
-                  </Link>
                   <Link href="/resources">
                     <Button
                       variant="outline"
@@ -243,12 +310,25 @@ export default function ReportPage() {
                 </Button>
 
                 <div className="flex gap-2">
-                  <Button variant="outline" className="border-[#A3CFF2] text-[#5BA4CF] hover:bg-[#D6ECFA]">
+                  <Button
+                    variant="outline"
+                    className="border-[#A3CFF2] text-[#5BA4CF] hover:bg-[#D6ECFA]"
+                  >
                     Lewati Langkah Ini
                   </Button>
-                  <Button onClick={handleNext} className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white">
-                    {currentStep === 3 ? "Kirim Laporan" : "Lanjutkan"}
-                    <ArrowRight className="h-4 w-4 ml-2" />
+                  <Button
+                    onClick={handleNext}
+                    className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? (
+                      <Loader2 className="h-4 w-4 ml-2 animate-spin" />
+                    ) : (
+                      <>
+                        {currentStep === 3 ? "Kirim Laporan" : "Lanjutkan"}
+                        <ArrowRight className="h-4 w-4 ml-2" />
+                      </>
+                    )}
                   </Button>
                 </div>
               </div>
@@ -258,14 +338,19 @@ export default function ReportPage() {
 
         {/* Support Message */}
         <div className="mt-8 text-center">
-          <p className="text-sm text-gray-600 mb-4">Butuh bantuan segera? Dukungan krisis tersedia 24/7.</p>
+          <p className="text-sm text-gray-600 mb-4">
+            Butuh bantuan segera? Dukungan krisis tersedia 24/7.
+          </p>
           <Link href="/emergency">
-            <Button variant="outline" className="border-[#FFE6E6] text-[#5BA4CF] hover:bg-[#FFE6E6] rounded-full">
+            <Button
+              variant="outline"
+              className="border-[#FFE6E6] text-[#5BA4CF] hover:bg-[#FFE6E6] rounded-full"
+            >
               Dapatkan Bantuan Darurat
             </Button>
           </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -171,11 +171,6 @@ export default function EmergencyPage() {
               setahun. Konselor terlatih siap mendengarkan, mempercayaimu, dan membantumu tetap aman.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/counseling">
-                <Button className="bg-[#5BA4CF] hover:bg-[#5BA4CF]/90 text-white px-6 py-3 rounded-full">
-                  Jadwalkan Konseling
-                </Button>
-              </Link>
               <Link href="/report">
                 <Button
                   variant="outline"

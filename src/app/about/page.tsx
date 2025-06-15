@@ -368,14 +368,6 @@ export default function AboutPage() {
                   Share Your Story
                 </Button>
               </Link>
-              <Link href="/counseling">
-                <Button
-                  variant="outline"
-                  className="border-[#5BA4CF] text-[#5BA4CF] hover:bg-[#D6ECFA] px-8 py-3 rounded-full"
-                >
-                  Find Support
-                </Button>
-              </Link>
             </div>
           </CardContent>
         </Card>
