@@ -322,8 +322,15 @@ export default function HomePage() {
 
           <div className="border-t border-[#A3CFF2]/20 mt-8 pt-8 text-center">
             <p className="text-gray-600 text-sm">
-              © 2024 Peluk untuk Pelik. Semua hak dilindungi. Privasi dan
-              keamananmu adalah prioritas kami.
+              © 2025 Peluk untuk Pelik. Made with ❤️ by{" "}
+              <a
+                href="https://www.mad.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#5BA4CF] hover:underline"
+              >
+                Nida Hawa Asila
+              </a>
             </p>
           </div>
         </div>
