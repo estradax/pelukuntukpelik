@@ -17,6 +17,7 @@ export default function ReportPage() {
     story: "",
     location: "",
     timeframe: "",
+    contact: "",
     contactConsent: false,
     supportNeeded: false,
   });
@@ -161,6 +162,20 @@ export default function ReportPage() {
                     value={formData.timeframe}
                     onChange={(e) =>
                       setFormData({ ...formData, timeframe: e.target.value })
+                    }
+                  />
+                </div>
+
+                <div>
+                  <Label className="text-base font-medium text-gray-800 mb-3 block">
+                    Kontak yang bisa dihubungi? (Opsional)
+                  </Label>
+                  <Input
+                    placeholder="Nomor telepon atau email atau apapun yang buat kamu nyaman"
+                    className="border-[#A3CFF2]/30 focus:border-[#5BA4CF]"
+                    value={formData.contact}
+                    onChange={(e) =>
+                      setFormData({ ...formData, contact: e.target.value })
                     }
                   />
                 </div>

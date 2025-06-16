@@ -5,28 +5,10 @@ import Link from "next/link"
 
 const emergencyContacts = [
   {
-    name: "Hotline Perlindungan Anak Nasional",
-    number: "119",
-    description: "Dukungan krisis 24/7 untuk anak dan keluarga",
+    name: "Kemen PPPA",
+    number: "SAPA 129",
+    description: "Dukungan krisis 24/7 untuk perempuan dan anak",
     type: "call",
-  },
-  {
-    name: "Pusat Krisis Perempuan & Anak",
-    number: "021-7270005",
-    description: "Dukungan khusus untuk penyintas kekerasan seksual",
-    type: "call",
-  },
-  {
-    name: "Crisis Text Line",
-    number: "Kirim BANTUAN ke 741741",
-    description: "Dukungan krisis gratis dan rahasia via SMS",
-    type: "text",
-  },
-  {
-    name: "Layanan Darurat",
-    number: "112",
-    description: "Untuk bahaya fisik langsung atau darurat medis",
-    type: "emergency",
   },
 ]
 

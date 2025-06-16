@@ -4,6 +4,7 @@ type SendRequestBody = {
   story: string;
   location: string;
   timeframe: string;
+  contact: string;
   contactConsent: boolean;
   supportNeeded: boolean;
 };
@@ -23,6 +24,9 @@ ${data.location}
 
 Waktu:
 ${data.timeframe}
+
+Kontak:
+${data.contact}
 `
   );
 
