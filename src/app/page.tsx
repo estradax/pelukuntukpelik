@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function HomePage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,7 +25,12 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Heart className="h-8 w-8 text-[#5BA4CF]" />
+              <Image
+                src="/logo.jpg"
+                alt="Peluk untuk Pelik"
+                width={70}
+                height={70}
+              />
               <span className="text-xl font-semibold text-[#5BA4CF]">
                 Peluk untuk Pelik
               </span>
